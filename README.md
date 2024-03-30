@@ -1,2 +1,4 @@
-# latin-kyrill
-Online converter for latin to cyrill | Or vice versa
+# latin-to-cyrillic
+Latin to Cyrillic Online Converter
+
+See live demo http://ikr0m.github.io/latin-to-cyrillic/
