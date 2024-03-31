@@ -164,5 +164,55 @@
       }
 
 
-       
-   
+      // Draggable button
+      // Get the draggable button
+const draggableButton = document.getElementById('copyButton');
+
+// Initialize variables to store mouse position and button position
+let isDragging = false;
+let offsetX, offsetY;
+
+// Function to handle mouse move event
+function handleMouseMove(event) {
+    if (isDragging) {
+        // Calculate new button position based on mouse position and offset
+        const newX = event.clientX - offsetX;
+        const newY = event.clientY - offsetY;
+
+        // Set button position
+        draggableButton.style.left = newX + 'px';
+        draggableButton.style.top = newY + 'px';
+    }
+}
+
+// Function to handle mouse up event
+function handleMouseUp() {
+    // Reset the flag indicating dragging has ended
+    isDragging = false;
+
+    // Remove event listeners for mouse move and mouse up events
+    document.removeEventListener('mousemove', handleMouseMove);
+    document.removeEventListener('mouseup', handleMouseUp);
+}
+
+// Function to handle mouse down event
+function handleMouseDown(event) {
+    // Check if the Ctrl key is pressed and left mouse button is clicked
+    if (event.ctrlKey && event.button === 0) {
+        // Calculate the offset between mouse position and button position
+        offsetX = event.clientX - draggableButton.getBoundingClientRect().left;
+        offsetY = event.clientY - draggableButton.getBoundingClientRect().top;
+
+        // Set the flag indicating dragging has started
+        isDragging = true;
+
+        // Add event listener for mouse move event
+        document.addEventListener('mousemove', handleMouseMove);
+
+        // Add event listener for mouse up event
+        document.addEventListener('mouseup', handleMouseUp);
+    }
+}
+
+// Add event listener for mouse down event on the button
+draggableButton.addEventListener('mousedown', handleMouseDown);
