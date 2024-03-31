@@ -163,55 +163,6 @@
         button.innerText = "Copy!";
       }
 
-      // Get the button element
-const draggableButton = document.getElementById('copyButton');
-
-// Initialize variables to store mouse position and button position
-let offsetX, offsetY, isDragging = false;
-
-// Function to handle context menu event (right click)
-function handleContextMenu(event) {
-    // Prevent the default context menu behavior
-    event.preventDefault();
-
-    // Calculate the offset between mouse position and button position
-    offsetX = event.clientX - draggableButton.getBoundingClientRect().left;
-    offsetY = event.clientY - draggableButton.getBoundingClientRect().top;
-
-    // Set the flag indicating dragging has started
-    isDragging = true;
-
-    // Add event listener for mouse move event
-    document.addEventListener('mousemove', handleMouseMove);
-}
-
-// Function to handle mouse move event
-function handleMouseMove(event) {
-    if (isDragging) {
-        // Calculate new button position based on mouse position and offset
-        const newX = event.clientX - offsetX;
-        const newY = event.clientY - offsetY;
-
-        // Set button position
-        draggableButton.style.left = newX + 'px';
-        draggableButton.style.top = newY + 'px';
-    }
-}
-
-// Function to handle mouse up event
-function handleMouseUp() {
-    // Reset the flag indicating dragging has ended
-    isDragging = false;
-
-    // Remove event listener for mouse move event
-    document.removeEventListener('mousemove', handleMouseMove);
-}
-
-// Add event listener for context menu event (right click) on the button
-draggableButton.addEventListener('contextmenu', handleContextMenu);
-
-// Add event listener for mouse up event to stop dragging
-document.addEventListener('mouseup', handleMouseUp);
 
        
    
