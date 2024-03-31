@@ -162,5 +162,3 @@
         await delay(3000);
         button.innerText = "Copy!";
       }
-       
-   
