@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Latin to Cyrillic Online Converter | Lotinchadan Kirillchaga onlayn o'tkazish</title>
+    <title>Latin to Cyrillic Online Converter v2.0 | Lotinchadan Kirillchaga onlayn o'tkazish v2.0</title>
     <meta charset="utf-8"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport"
@@ -9,15 +9,15 @@
     <meta name="description"
           content="Latin to Uzbek Cyrillic converter. Lotinchadan Krillchaga o'girish"/>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
 
     
 </head>
 <body>
 <div class="container">
-    <h1 class="text-center">Latin text to Uzbek Cyrillic text converter</h1>
+    <h1 class="text-center">Latin text to Uzbek Cyrillic text converter v2.0</h1>
 
-    <h1 class="sr-only">Lotinchadan, lotinchani Krillchaga o'girish</h1>
+    <h1 class="sr-only">Lotinchadan, lotinchani Krillchaga o'girish v2.0</h1>
 
     <div class="row">
         <p class="col-md-6">
@@ -27,6 +27,8 @@
                     placeholder="Latin text here"
                     rows="10"
                     oninput="onLatinTextChange(this.value)"></textarea>
+
+                    
         </p>
 
         <p class="col-md-6">
@@ -36,6 +38,9 @@
                     rows="10"
                     id="cyrillic_textarea">
             </textarea>
+            <button id="copyButton" onclick="copyText()">Copy all</button>
+        
+
         </p>
     </div>
 </div>
