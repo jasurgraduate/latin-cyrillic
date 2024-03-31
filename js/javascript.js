@@ -1,4 +1,4 @@
-<script type="text/javascript">
+
         function getCyrillicText(latinText) {
             if (!latinText) {
                 return "";
@@ -129,4 +129,4 @@
             cyrillicTextareaElem.value = div.innerText;
 
         }
-    </script>
+   
