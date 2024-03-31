@@ -1,4 +1,5 @@
 
+
         function getCyrillicText(latinText) {
             if (!latinText) {
                 return "";
@@ -129,4 +130,37 @@
             cyrillicTextareaElem.value = div.innerText;
 
         }
+        let copy = (cyrillic_textarea) => {
+        document.getElementById(cyrillic_textarea).select();
+        //Copies the selected text to clipboard
+        document.execCommand("copy");
+        alert("Text copied to clipboard: " + input.value);
+      }
+
+      const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
+
+      // Define an async function
+      async function myAsyncFunction() {
+          console.log("Start");
+      
+          // Use await to wait for the delay
+          //await delay(2000); // Wait for 2 seconds
+      }
+      async function copyText() {
+        // Get the input element
+        var input = document.getElementById("cyrillic_textarea");
+      
+        // Select the text inside the input
+        input.select();
+      
+        // Execute the copy command
+        document.execCommand("copy");
+      
+        // Change the text of the button
+        var button = document.getElementById("copyButton");
+        button.innerText = "Text Copied!";
+        await delay(3000);
+        button.innerText = "Copy!";
+      }
+       
    
