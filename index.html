@@ -40,28 +40,27 @@
     <img src="logo.png" alt="jasurjacob.blogspot.com"></a>
 </header>
 <div class="container">
-    <h1 class="text-center">Latin text to Uzbek Cyrillic text converter v2.0</h1>
-
-    <h1 class="sr-only">Lotinchadan, lotinchani Krillchaga o'girish v2.0</h1>
+    <h1 class="text-center">Latin text to Uzbek Cyrillic text converter v2.0 | Lotinchadan, lotinchani Krillchaga o'girish v2.0</h1>
 
     <div class="row">
         <div class="col-md-6">
-            <h2 class="input-title">Latin text</h2>
+            <h2 class="input-title">Lotincha</h2>
             <textarea
                     autofocus=""
                     class="form-control input-area"
-                    placeholder="Enter Latin text here"
+                    placeholder="Lotincha matnni kiriting"
                     rows="10"
                     oninput="onLatinTextChange(this.value)"></textarea>
         </div>
 
         <div class="col-md-6">
             <div class="input-area-container">
-                <h2 class="input-title">Uzbek Cyrillic text</h2>
+                <h2 class="input-title">Kirillcha</h2>
                 <textarea
                         readonly
                         class="form-control input-area"
                         rows="10"
+                    placeholder="Kirillcha matn bu yerda ko'rinadi"
                         id="cyrillic_textarea"></textarea>
                 <button id="copyButton" onclick="copyText()">Copy all</button>
             </div>
