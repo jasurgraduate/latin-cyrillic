@@ -69,8 +69,10 @@
             "Ya": "&#1071;",
             "YA": "&#1071;",
             "G'": "&#1170;",
+            "G`": "&#1170;",
             "O'": "&#1038;",
             "O’": "&#1038;",
+            "O`": "&#1038;",
             "Yo": "&#1025;",
             "YO": "&#1025;",
             "Q": "&#1178;",
@@ -113,12 +115,18 @@
             "ya": "&#1103;",
             "yA": "&#1103;",
             "o'": "&#1118;",
+            "o`": "&#1118;",
             "q": "&#1179;",
             "g'": "&#1171;",
+            "g`": "&#1171;",
             "yo": "&#1105;",
             "yO": "&#1105;",
             "h": "&#1203;", // (isMobile ? "&#1093;":"&#1203;)
             "w": "&#1100;",
+            "ww": "&#1097;",
+            "WW": "&#1065;",
+            "II": "&#1067;",
+            "ii": "&#1099;",
             "W": "&#1068;"
         };
 
@@ -158,9 +166,9 @@
       
         // Change the text of the button
         var button = document.getElementById("copyButton");
-        button.innerText = "Text Copied!";
+        button.innerText = "☑ Text Copied!";
         await delay(3000);
-        button.innerText = "Copy!";
+        button.innerText = "✄ Copy!";
       }
 
 
