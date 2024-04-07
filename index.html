@@ -14,33 +14,16 @@
      <!-- Add favicon -->
      <link rel="icon" type="image/ico" href="favicon.ico">
 
-    <style>
-        /* Additional styles for header and footer */
-        header {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 20px;
-            padding: 10px 0;
-            background-color: #f9f9f9;
-            font-size: 14px;
-        }
-
-        footer p {
-            margin: 0;
-        }
-    </style>
 </head>
-<body>
+<body><div class="logo"><a href="https://jasurjacob.blogspot.com">
+    <img src="logo.png" alt="jasurjacob.blogspot.com"></a></div>
+
 <header>
-    <a href="https://jasurjacob.blogspot.com">
-    <img src="logo.png" alt="jasurjacob.blogspot.com"></a>
+    <h1>
+    Latin text to Uzbek Cyrillic text converter v2.0 | Lotinchadan, lotinchani Krillchaga o'girish v2.0</h1>
 </header>
 <div class="container">
-    <h1 class="text-center">Latin text to Uzbek Cyrillic text converter v2.0 | Lotinchadan, lotinchani Krillchaga o'girish v2.0</h1>
+    
 
     <div class="row">
         <div class="col-md-6">
@@ -49,7 +32,7 @@
                     autofocus=""
                     class="form-control input-area"
                     placeholder="Lotincha matnni kiriting"
-                    rows="10"
+                    rows="15"
                     oninput="onLatinTextChange(this.value)"></textarea>
         </div>
 
@@ -59,17 +42,24 @@
                 <textarea
                         readonly
                         class="form-control input-area"
-                        rows="10"
+                        rows="15"
                     placeholder="Kirillcha matn bu yerda ko'rinadi"
                         id="cyrillic_textarea"></textarea>
-                <button id="copyButton" onclick="copyText()">Copy all</button>
+                <button id="copyButton" onclick="copyText()">✄ Copy all</button>
             </div>
         </div>
     </div>
 </div>
+
+<div class="hints"><h4>Hints:
+w=ь | ww=щ, WW=Щ | ii=ы, II=Ы | Ts=Ц,ts=ц 
+</h4></div>
+
+
+
 <footer>
-    <p>&copy; 2019-2024 <a href="https://jasurjacob.blogspot.com">
-   Jasur Anorkulov</a>. All rights reserved.</p>
+    <h3>&copy; 2019-2024 <a href="https://jasurjacob.blogspot.com">
+   Jasur Anorkulov</a>. | Feedback: jasur&#64;graduate.org | All rights reserved.</h3>
 </footer>
 <script src="js/javascript.js"></script>
 </body>
